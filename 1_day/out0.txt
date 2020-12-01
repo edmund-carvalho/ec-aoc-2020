@@ -1,0 +1,3 @@
+Using input file : ./in0.txt
+{Day 1 :: Challenge 1 solution} [i:1721 j:299] -> i*j = 514579 
+{Day 1 :: Challenge 2 solution} [i:979 j:366 k:675] i*j*k = 241861950 
