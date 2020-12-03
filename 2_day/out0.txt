@@ -1,0 +1,3 @@
+Using input file : in0.txt
+{Day 2 :: Challenge 1 solution} Found <2> valid passwords. 
+{Day 2 :: Challenge 2 solution} Found <1> valid passwords. 

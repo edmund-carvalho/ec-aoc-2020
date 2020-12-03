@@ -1,0 +1,3 @@
+Using input file : in1.txt
+{Day 2 :: Challenge 1 solution} Found <536> valid passwords. 
+{Day 2 :: Challenge 2 solution} Found <558> valid passwords. 
