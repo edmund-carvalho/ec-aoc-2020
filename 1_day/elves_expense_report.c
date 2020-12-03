@@ -31,7 +31,6 @@
 #include <stdint.h>
 #include <errno.h>
 
-#define INPUT_EX1 "aoc_day1_input1.txt"
 #define MAX_LINE_LEN 10
 
 int get_line_count(char *file_path)
@@ -116,7 +115,7 @@ int main(int argc, char *argv[])
   }
 
   int line_count = get_line_count(input_file_path);
-  int *data = malloc(line_count * sizeof(int));
+  int *data = calloc(line_count, sizeof(int));
   parse_input_file(input_file_path, data);
   process_expense_report(data, line_count);
 
