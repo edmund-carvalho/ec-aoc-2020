@@ -1,0 +1,3 @@
+Using input file : in0.txt
+{Day 3 :: Challenge 1 solution} Trees hit : <7>. 
+{Day 3 :: Challenge 2 solution} Trees hit : <336>. 
