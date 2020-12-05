@@ -1,0 +1,2 @@
+Using input file : in1.txt
+Max seat ID : 858 
