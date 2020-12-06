@@ -1,0 +1,2 @@
+Using input file : in1.txt
+{Day 6 :: Challenge_2 solution} Checksum : 3052 
