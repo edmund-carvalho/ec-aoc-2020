@@ -1,0 +1,3 @@
+Using input file : in0.txt
+Stack corrupted; accumulator value before loop : 5
+Foung BUG at offset 8 !! Stack repaired :D; accumulator value at the end of stack : 8

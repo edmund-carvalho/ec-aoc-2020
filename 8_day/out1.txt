@@ -1,0 +1,3 @@
+Using input file : in1.txt
+{Day 8 :: Challenge 1 solution} Stack corrupted; accumulator value before loop : 2014
+{Day 8 :: Challenge 2 solution} Foung BUG at offset 278 !! Stack repaired :D; accumulator value at the end of stack : 2251
