@@ -1,0 +1,3 @@
+Using input file : in0.txt
+{Day 9 :: Challenge 1 solution} Following number does not allign to the xmas protocol 393911906 
+{Day 9 :: Challenge 2 solution} Weakness key : 59341885 
