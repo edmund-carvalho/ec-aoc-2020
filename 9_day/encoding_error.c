@@ -265,12 +265,12 @@ int main(int argc, char *argv[])
   }
 
   int line_count = get_line_count(input_file_path);
-  int64_t *data = calloc(line_count, sizeof(int64_t));
-  parse_input_file(input_file_path, data);
+  int64_t *xmas_data_stream = calloc(line_count, sizeof(int64_t));
+  parse_input_file(input_file_path, xmas_data_stream);
 
-  exploit_xmas_data(data, line_count, process_xmas_data(data, line_count));
+  exploit_xmas_data(xmas_data_stream, line_count, process_xmas_data(xmas_data_stream, line_count));
 
-  free(data);
+  free(xmas_data_stream);
 
   return (0);
 }
