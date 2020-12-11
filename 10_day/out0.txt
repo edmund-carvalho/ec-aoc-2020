@@ -1,0 +1,3 @@
+Using input file : in0.txt
+builtin_adapter_joltage_g : 151
+{Day 10 :: Challenge 1 solution} Jolt product : 1856 
