@@ -1,0 +1,2 @@
+Using input file : in1.txt
+{Day 10 :: Challenge 1 solution} Number of occupied seats :2247
