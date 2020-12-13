@@ -151,9 +151,9 @@ int64_t _get_num_seats_occupied(int8_t **map, int64_t y_dim_max, int64_t x_dim_m
   int64_t ret=0;
   for (int i=0; i<y_dim_max; i++){
     for (int j=0; j<x_dim_max; j++){
-     if(map[i][j] == OCCUPIED_SEAT) {
-       ret++;
-     }
+      if(map[i][j] == OCCUPIED_SEAT) {
+        ret++;
+      }
     }
   }
   return(ret);
@@ -164,8 +164,6 @@ void process_floor_map(int8_t **map, int8_t **new_map, int64_t y_dim_max, int64_
 {
   int64_t seat_count[3];
   int i,j;
-
-refresh_map:
 
   for (i=0; i<y_dim_max; i++){
     for (j=0; j<x_dim_max; j++){
@@ -220,7 +218,7 @@ refresh_map:
         _increment_block_type(map[i][j-1], seat_count);
         _increment_block_type(map[i-1][j-1], seat_count);
         _increment_block_type(map[i-1][j], seat_count);
-      }
+      }  
       // The rest of the cases
       else {      
         _increment_block_type(map[i-1][j-1], seat_count);
@@ -232,7 +230,7 @@ refresh_map:
         _increment_block_type(map[i+1][j], seat_count);
         _increment_block_type(map[i+1][j+1] , seat_count);
       }
-    
+
       //printf("idx %d:%d seat_count[eOCCUPIED_SEAT]:%ld seat_count[eEMPTY_SEAT]:%ld \n",i,j,seat_count[eOCCUPIED_SEAT],seat_count[eEMPTY_SEAT] );
       if (map[i][j] == EMPTY_SEAT && (seat_count[eOCCUPIED_SEAT]==0)){
         new_map[i][j] = OCCUPIED_SEAT;
@@ -248,11 +246,12 @@ refresh_map:
   //print_data(new_map, y_dim_max, x_dim_max);
   if (_is_occupied_seats_matching(map, new_map, y_dim_max, x_dim_max) == false ){
     _copy_map(new_map, map, y_dim_max, x_dim_max);
-    goto refresh_map;
+    process_floor_map(map, new_map, y_dim_max, x_dim_max);
   } else {
     printf("{Day 10 :: Challenge 1 solution} Number of occupied seats :%ld\n",_get_num_seats_occupied(new_map, y_dim_max, x_dim_max));
   }
 
+  return;
 }
 
 int main(int argc, char *argv[])
@@ -282,7 +281,7 @@ int main(int argc, char *argv[])
   //print_data(floor_map_previous, num_rows, row_len);
   process_floor_map(floor_map_previous, floor_map_updated, num_rows, row_len);
 
-  
+
   for (int i=0;i<num_rows;i++){
     free(floor_map_previous[i]);
     free(floor_map_updated[i]);
